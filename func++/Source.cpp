@@ -14,8 +14,12 @@ int main() {
 	int num;
 	cout << "Enter num: ";
 	cin >> num;
-	TrueOrFalse(num);
-
+	if (TrueOrFalse(num)) {
+		cout << "True!";
+	}
+	else {
+		cout << "False!";
+	}
 	system("pause>nul");
 	return 0;
 }
