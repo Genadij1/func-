@@ -3,12 +3,12 @@ using namespace std;
 
 void function_1(int a, int b)
 {
-    int sum = 0;
-    for (int i = a; i <= b; i++)
+    int s = 1;
+    for (int i = 1; i <= b; i++)
     {
-        sum *= i;
+        s *=a;
     }
-    cout << sum;
+    cout << s;
 }
 
 int main() {
