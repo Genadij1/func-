@@ -2,22 +2,30 @@
 #include <cstdlib>
 using namespace std;
 
-void dos(int number) {
-	int i, sum = 0;
-	for (i = 1; i < number; i++)
-		if (number % i == 0) {
-			sum += i;
+void dos(int number1, int number2) {
+	int i, sum = 0, k;
+	for (i = number1; i <= number2; i++)
+		for (k = 1; k < i; k++) {
+			if (i % k == 0) {
+				sum += k;
+				if (sum == i) {
+					cout << i << " ";
+					sum = 0;
+				}
+			}
 		}
-	cout << sum;
+	k = 1;
 }
 
 int main() {
 
-	int number;
-	cout << "Enter the number: ";
-	cin >> number;
+	int number1, number2;
+	cout << "Enter the number 1: ";
+	cin >> number1;
+	cout << "Enter the number 2: ";
+	cin >> number2;
 
-	dos(number);
+	dos(number1,number2);
 
 	system("pause>nul");
 	return 0;
