@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 void dos(int number1, int number2) {
@@ -23,6 +24,7 @@ int main() {
     cin >> number2;
 
     dos(number1, number2);
+    system("pause>nul");
 
     return 0;
 }
